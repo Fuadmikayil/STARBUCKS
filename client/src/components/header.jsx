@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap'
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 const Header = () => {
   const logoRef = useRef();
@@ -19,7 +19,7 @@ const Header = () => {
       navBtnsRef.current,
       { opacity: 0, x: 30, y: -20, scale: 0.8 },
       { opacity: 1, x: 0, y: 0, scale: 1 },
-      '<'
+      "<"
     );
 
     tl.fromTo(navLinksRef.current, { opacity: 0, y: 10 }, { opacity: 1, y: 0 });

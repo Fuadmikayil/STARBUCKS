@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react';
-import Header from './components/header';
-import Animation from './animation';
-import { coffees } from './data/coffees';
-import ProductCard from './components/productCard';
+import React, { useEffect, useRef } from "react";
+import Header from "./components/header";
+import Animation from "./animation";
+import { coffees } from "./data/coffees";
+import ProductCard from "./components/productCard";
 
 const App = () => {
   const demoImg = useRef();
@@ -10,8 +10,8 @@ const App = () => {
   const txt2 = useRef();
   const txt3 = useRef();
 
-  const productCard = useRef(); 
-  productCard.current = []; 
+  const productCard = useRef();
+  productCard.current = [];
   const addToProductCardRefs = (el) => {
     if (el && !productCard.current.includes(el)) {
       productCard.current.push(el);
@@ -69,7 +69,7 @@ const App = () => {
               ref={txt2}
               className=" text-gray-200 text-2xl font-normal tracking-wider leading-[120%]"
             >
-              {' '}
+              {" "}
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
               cum quia nobis sed beatae incidunt.
             </p>
@@ -77,7 +77,7 @@ const App = () => {
               ref={txt3}
               className=" text-gray-200 text-2xl font-normal tracking-wider leading-[120%]"
             >
-              {' '}
+              {" "}
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
               cum quia nobis sed beatae incidunt.
             </p>
@@ -87,7 +87,7 @@ const App = () => {
 
       <div className="min-h-screen bg-[#1e3932] py-40">
         <div className="container mx-auto flex items-center justify-center gap-24 flex-wrap">
-          {coffees.map((item,index) => {
+          {coffees.map((item, index) => {
             return (
               <ProductCard ref={addToProductCardRefs} key={index} item={item} />
             );
